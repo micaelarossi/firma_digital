@@ -1,0 +1,72 @@
+{
+  "FirmaPrueba_v1.json": 
+
+{
+	"title": "Firma simple v2",
+	"templateVersion": "test",
+	"argumentList": [
+		"documentos",
+		"numeroTramite",
+		"nombreUsuario",
+		"urlBase",
+		"token",
+        "cl"
+	],
+	"data": {
+		"signatureType": "PDF",
+		"pdfSignatureConfig": {
+			"VisibilityConfig": {
+				"signaturePage": "signaturesPage"
+			},
+			"reason": "Firmado por ${nombreUsuario}, para el tramite $numeroTramite, {$DATE}"
+		},
+		"certConfig": {
+			"certificateLocation": "${cl}",
+		"customPath": "${urlBase}/${cert}"
+		},
+"formFields":{
+        "values": {
+            "cuil_habilitador":"20354414040",
+            "nombre_habilitador":"Ramos Ignacio",
+            "cuil_or":"20362650969",
+            "nombre_or":"Croppi Guillermo"
+}
+        },
+		"fileOrigins": {
+    			"remote": {
+				"URI": "http://10.201.4.28:8080/resource/content/CId-kbeeidoc-657304/DEMANDA_10091002772__.PDF",
+				"method": "GET",
+				"fileList": "${documentos}",
+				"headers": {
+					"Accept": "application/pdf"
+				}
+			}
+		},
+		"fileDestination": {
+			"remote": {
+				"URI": "${urlBase}/api/recibo/firmado",
+				"method": "POST",
+				"fileField": "archivo",
+				"formFields": {
+					"tramite": "$numeroTramite",
+					"firmado": true,
+					"idArchivo": "{$FILE_ID}"
+				}
+			}
+		},
+		"interfaz": {
+			"title": "Firmado de documentos simple",
+			"username": "$nombreUsuario"
+		},
+		"sharedHeaders": {
+			"Authorization": "Basic cm9vdEBwanNmOjFBcXFxcXFx"
+		},
+		"template": {
+                        "id": "webtestplantilla_01",
+			"expiration": "1234567890",
+			"createdAt": "1247567890"
+		}
+	},
+	"signature": ""
+}
+						}
