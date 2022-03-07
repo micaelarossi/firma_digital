@@ -1,5 +1,5 @@
 {
-  "FirmaEjemplo_v1.json": 
+  "FirmaEjemplo_v2.json": 
 
 							{
 							  "title": "FirmaEjemplo_v1",
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "http://10.201.4.28:8080/resource/content/CId-kbeeidoc-657304/DEMANDA_10091002772__.PDF",
+							        "URI": "${token}",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
