@@ -1,5 +1,5 @@
 {
-  "FirmaPrueba_v6.json": 
+  "FirmaPrueba_v7.json": 
 
 							{
 							  "title": "Firma simple v2",
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "http://10.201.4.28:8080/resource/content/CId-kbeeidoc-657304/DEMANDA_10091002772__.pdf",
+							        "URI": "http://10.201.4.28:8080/DEMANDA_10091002772__.PDF",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
