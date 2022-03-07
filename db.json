@@ -1,5 +1,5 @@
 {
-  "FirmaPrueba_v1.json": 
+  "FirmaPrueba_v2.json": 
 
 {
 	"title": "Firma simple v2",
@@ -34,7 +34,7 @@
         },
 		"fileOrigins": {
     			"remote": {
-				"URI": "http://10.201.4.28:8080/resource/content/CId-kbeeidoc-657304/DEMANDA_10091002772__.PDF",
+				"URI": "https://alaska.gov/kids/pub/studentpostcard.pdf",
 				"method": "GET",
 				"fileList": "${documentos}",
 				"headers": {
@@ -59,7 +59,7 @@
 			"username": "$nombreUsuario"
 		},
 		"sharedHeaders": {
-			"Authorization": "Basic cm9vdEBwanNmOjFBcXFxcXFx"
+			"Authorization":"Bearer ${token}"
 		},
 		"template": {
                         "id": "webtestplantilla_01",
