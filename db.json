@@ -1,8 +1,8 @@
 {
-  "FirmaPrueba_v8.json": 
+  "FirmaEjemplo_v1.json": 
 
 							{
-							  "title": "Firma simple v2",
+							  "title": "FirmaEjemplo_v1",
 							  "templateVersion": "test",
 							  "argumentList": [
 							    "documentos",
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "https://alaska.gov/kids/pub/studentpostcard.pdf",
+							        "URI": "http://10.201.4.28:8080/resource/content/CId-kbeeidoc-657304/DEMANDA_10091002772__.PDF",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
