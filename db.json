@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "http://10.201.4.28:8080/DEMANDA_10091002772__.PDF",
+							        "URI": "https://alaska.gov/kids/pub/studentpostcard.pdf",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
