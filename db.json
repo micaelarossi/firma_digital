@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "https://alaska.gov/kids/pub/studentpostcard.PDF",
+							        "URI": "https://alaska.gov/kids/pub/studentpostccard.pdf",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
