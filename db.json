@@ -1,5 +1,5 @@
 {
-  "FirmaPrueba_v3.json": 
+  "FirmaPrueba_v5.json": 
 
 							{
 							  "title": "Firma simple v2",
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "https://alaska.gov/kids/pub/studentpostcard.PDF",
+							        "URI": "https://alaska.gov/kids/pub/studentpostcard.pdf",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
