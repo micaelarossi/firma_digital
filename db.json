@@ -1,5 +1,5 @@
 {
-  "FirmaPrueba_v2.json": 
+  "FirmaPrueba_v3.json": 
 
 {
 	"title": "Firma simple v2",
@@ -59,7 +59,7 @@
 			"username": "$nombreUsuario"
 		},
 		"sharedHeaders": {
-			"Authorization":"Bearer ${token}"
+			"Authorization": "Basic cm9vdEBwanNmOjFBcXFxcXFx"
 		},
 		"template": {
                         "id": "webtestplantilla_01",
