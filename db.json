@@ -1,11 +1,10 @@
 {
-  "GESTOR_v2.json": 
+  "GESTOR_v3.json": 
 
 							{
 							  "title": "FirmaEjemplo_v1",
 							  "templateVersion": "test",
 							  "argumentList": [
-							    "documentos",
 							    "numeroTramite",
 							    "nombreUsuario",
 							    "urlBase",
@@ -36,9 +35,9 @@
 							      "remote": {
 							        "URI": "${urlDocumento}",
 							        "method": "GET",
-							        "fileList": "${documentos}",
 							        "headers": {
-							          "Accept": "application/pdf"
+							          "Accept": "application/pdf",
+							          "Content-Disposition": "attachment"
 							        }
 							      }
 							    },
