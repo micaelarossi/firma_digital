@@ -1,5 +1,5 @@
 {
-  "GESTOR_v5.json": 
+  "GESTOR_v6.json": 
 
 							{
 							  "title": "FirmaEjemplo_v1",
@@ -39,7 +39,7 @@
 							        "fileList": "${documentos}",
 							        "headers": {
 							          "Accept": "application/pdf",
-							          "Content-Disposition": "attachment; filename=filename.pdf"
+							          "Content-Disposition": "attachment"
 							        }
 							      }
 							    },
