@@ -1,5 +1,5 @@
 {
-  "ANUEVOOOO_v1.json": 
+  "GESTOR_v1.json": 
 
 							{
 							  "title": "FirmaEjemplo_v1",
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "http://10.201.4.28:8080/api/resourceref/55053204/DEMANDA_10091002772__.PDF?token=jsgchgdkifgifr1t2p9ul02shp",
+							        "URI": "http://10.201.4.28:8080/api/resourceref/55048192/DEMANDA_10091002762__.PDF?token=v3vq153mf4up4oo7n6203pdab5",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
@@ -57,9 +57,6 @@
 							    "interfaz": {
 							      "title": "Firmado de documentos simple",
 							      "username": "$nombreUsuario"
-							    },
-							    "sharedHeaders": {
-							      "Authorization": "Basic cm9vdEBwanNmOjFBcXFxcXFx"
 							    },
 							    "template": {
 							      "id": "webtestplantilla_01",
