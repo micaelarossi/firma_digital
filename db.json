@@ -1,5 +1,5 @@
 {
-  "GESTOR_v1.json": 
+  "GESTOR_v2.json": 
 
 							{
 							  "title": "FirmaEjemplo_v1",
@@ -9,7 +9,7 @@
 							    "numeroTramite",
 							    "nombreUsuario",
 							    "urlBase",
-							    "token",
+							    "urlDocumento",
 							    "cl"
 							  ],
 							  "data": {
@@ -34,7 +34,7 @@
 							    },
 							    "fileOrigins": {
 							      "remote": {
-							        "URI": "http://10.201.4.28:8080/api/resourceref/55048192/DEMANDA_10091002762__.PDF?token=v3vq153mf4up4oo7n6203pdab5",
+							        "URI": "${urlDocumento}",
 							        "method": "GET",
 							        "fileList": "${documentos}",
 							        "headers": {
