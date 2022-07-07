@@ -19,7 +19,7 @@
       "reason": "Firmado por ${nombreUsuario}, para el tramite $numeroTramite, {$DATE}"
     },
     "certConfig": {
-      "certificateLocation": "${cl}",
+      "certificateLocation": "MSCAPI",
       "customPath": "${urlBase}/${cert}"
     },
     "formFields": {
