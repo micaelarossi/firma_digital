@@ -16,7 +16,7 @@
       "VisibilityConfig": {
         "signaturePage": "signaturesPage"
       },
-      "reason": "Firmado por ${nombreUsuario}, para el tramite $numeroTramite, {$DATE}"
+      "reason": "Firmado por ${nombreUsuario} - {$DN} , {$DATE}"
     },
     "certConfig": {
       "certificateLocation": "MSCAPI",
