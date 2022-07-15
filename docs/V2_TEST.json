@@ -1,34 +1,23 @@
 {
-  "title": "V2_TEST",
-  "templateVersion": "test",
+  "title": "V3_TEST",
+  "templateVersion": "3",
   "argumentList": [
     "documentos",
-    "numeroTramite",
-    "nombreUsuario",
     "urlBase",
-    "urlDocumento",
-    "token",
-    "cl"
+    "urlDocumento"
   ],
   "data": {
     "signatureType": "PDF",
     "pdfSignatureConfig": {
       "VisibilityConfig": {
-        "signaturePage": "signaturesPage"
+        "signaturePage": "first",
+        "fontSize": "8",
+        "font": "Courier"
       },
-      "reason": "Firmado por ${nombreUsuario} - {$DN} , {$DATE}"
+      "reason": "Firmado por {$SIGNER}, el {$DATE}."
     },
     "certConfig": {
-      "certificateLocation": "MSCAPI",
-      "customPath": "${urlBase}/${cert}"
-    },
-    "formFields": {
-      "values": {
-        "cuil_habilitador": "20354414040",
-        "nombre_habilitador": "Ramos Ignacio",
-        "cuil_or": "20362650969",
-        "nombre_or": "Croppi Guillermo"
-      }
+      "certificateLocation": ["MSCAPI","HWTOKEN","ASK"]
     },
     "fileOrigins": {
       "remote": {
@@ -36,8 +25,7 @@
         "method": "GET",
         "fileList": "${documentos}",
         "headers": {
-          "Accept": "application/pdf",
-          "Authorization": "Basic ZmRAaW5kcmFmaXJtYToxQXFxcXFxcQ=="
+          "Accept": "application/pdf"
         }
       }
     },
@@ -46,22 +34,22 @@
         "URI": "${urlBase}/api/recibo/firmado",
         "method": "POST",
         "fileField": "archivo",
+        "keepName": true,
         "formFields": {
-          "tramite": "$numeroTramite",
           "firmado": true,
           "idArchivo": "{$FILE_ID}"
         }
       }
     },
     "interfaz": {
-      "title": "Firmado de documentos simple",
-      "username": "$nombreUsuario"
+      "title": "Firmado de documentos Plantilla TEST",
+      "hideDocuments": true
     },
     "template": {
       "id": "webtestplantilla_01",
-      "expiration": "1234567890",
-      "createdAt": "1247567890"
+      "expiration": 1659030958375,
+      "createdAt": 1657734958375
     }
   },
-  "signature": ""
+  "signature": "Xdl46qo8CaQhZUY5duFpiw0ELZB590Xc2KP9q4eOF4uTp7eSvzLS+wEdFaWeZop8DsDFz1sVi3Qn1u/IXEllXPnQPK9uhqjKzkBHXSGT8meB70NmNOM1ygZk8ImnhMDkpk0O899qr4ykSG2Mc3xYz83VcsH98MpumWD7FiCetYYugKyRU69BiygYDipDKnOj9gkhbNEVuFLiHMHVkuXuK2YRcz0JVOlCU7TwyB0qpcWW+CJWJDCbcMjrYkR5Y5tudq0M6vjq9ghRHXBS+ZUGgm2/Ku/peJI2iEOPmoAgi4kyLI+/rcUeEUfEi5P2CadCg1GHEly2iAL59dddSoxTvw=="
 }
