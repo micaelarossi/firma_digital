@@ -3,9 +3,11 @@
   "templateVersion": "test",
   "argumentList": [
     "documentos",
-    "fechaFirma",
+    "numeroTramite",
+    "nombreUsuario",
     "urlBase",
     "urlDocumento",
+    "token",
     "cl"
   ],
   "data": {
@@ -14,7 +16,7 @@
       "VisibilityConfig": {
         "signaturePage": "signaturesPage"
       },
-      "reason": "Firmado por ${nombreUsuario}, ${fechaFirma}"
+      "reason": "Firmado por ${nombreUsuario} - {$DN} , {$DATE}"
     },
     "certConfig": {
       "certificateLocation": "MSCAPI",
