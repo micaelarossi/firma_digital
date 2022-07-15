@@ -35,6 +35,11 @@
         "URI": "${urlBase}/api/recibo/firmado",
         "method": "POST",
         "fileField": "archivo",
+        "formFields": {
+          "tramite":"$numeroTramite",
+          "firmado":true,
+          "idArchivo": "{$FILE_ID}"
+        },
         "keepName": true
       }
     },
