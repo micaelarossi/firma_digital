@@ -2,6 +2,7 @@
   "title": "V3_TEST",
   "templateVersion": "3",
   "argumentList": [
+    "fechaFirma",
     "documentos",
     "numeroTramite",
     "nombreUsuario",
@@ -18,7 +19,7 @@
         "fontSize": "8",
         "font": "Courier"
       },
-      "reason": "Firmado por {$SIGNER}, el ."
+      "reason": "Firmado por {$SIGNER}, el ${fechaFirma}."
     },
     "certConfig": {
       "certificateLocation": ["MSCAPI","HWTOKEN","ASK"]
