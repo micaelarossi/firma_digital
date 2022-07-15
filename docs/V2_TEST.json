@@ -8,7 +8,8 @@
     "urlBase",
     "urlDocumento",
     "token",
-    "cl"
+    "cl",
+    "fechaFirma"
   ],
   "data": {
     "signatureType": "PDF",
