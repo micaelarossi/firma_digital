@@ -4,7 +4,7 @@
   "argumentList": [
     "documentos",
     "numeroTramite",
-    "nombreUsuario",
+    "fechaFirma",
     "urlBase",
     "urlDocumento",
     "token",
@@ -16,7 +16,7 @@
       "VisibilityConfig": {
         "signaturePage": "signaturesPage"
       },
-      "reason": "Firmado por ${nombreUsuario} - {$DN} , {$DATE}"
+      "reason": "Firmado por ${fechaFirma} - {$DN} , {$DATE}"
     },
     "certConfig": {
       "certificateLocation": "MSCAPI",
@@ -55,7 +55,7 @@
     },
     "interfaz": {
       "title": "Firmado de documentos simple",
-      "username": "$nombreUsuario"
+      "username": "$fechaFirma"
     },
     "template": {
       "id": "webtestplantilla_01",
