@@ -4,12 +4,8 @@
   "argumentList": [
     "fechaFirma",
     "documentos",
-    "numeroTramite",
-    "nombreUsuario",
     "urlBase",
-    "urlDocumento",
-    "token",
-    "cl"
+    "urlDocumento"
   ],
   "data": {
     "signatureType": "PDF",
