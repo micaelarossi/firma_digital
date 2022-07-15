@@ -1,6 +1,6 @@
 {
   "title": "V2_TEST",
-  "templateVersion": "test",
+  "templateVersion": 3,
   "argumentList": [
     "documentos",
     "numeroTramite",
