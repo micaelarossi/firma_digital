@@ -2,10 +2,13 @@
   "title": "V3_TEST",
   "templateVersion": "3",
   "argumentList": [
-    "fechaFirma",
     "documentos",
+    "numeroTramite",
+    "nombreUsuario",
     "urlBase",
-    "urlDocumento"
+    "urlDocumento",
+    "token",
+    "cl"
   ],
   "data": {
     "signatureType": "PDF",
