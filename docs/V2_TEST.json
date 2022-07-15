@@ -22,7 +22,7 @@
     },
     "fileOrigins": {
       "remote": {
-        "URI": "${urlDocumento}",
+        "URI": "${urlDocumento}/{$FILE_ID}",
         "method": "GET",
         "fileList": "${documentos}",
         "headers": {
@@ -35,11 +35,7 @@
         "URI": "${urlBase}/api/recibo/firmado",
         "method": "POST",
         "fileField": "archivo",
-        "keepName": true,
-        "formFields": {
-          "firmado": true,
-          "idArchivo": "{$FILE_ID}"
-        }
+        "keepName": true
       }
     },
     "interfaz": {
