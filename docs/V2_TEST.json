@@ -1,61 +1,55 @@
 {
-	"title": "Firma simple v2",
-	"templateVersion": "test",
-	"argumentList": [
-		"documentos",
-		"numeroTramite",
-		"nombreUsuario",
-		"urlBase",
-		"urlDocumento",
-		"token",
-        "cl"
-	],
-	"data": {
-		"signatureType": "PDF",
-		"pdfSignatureConfig": {
-			"VisibilityConfig": {
-				"signaturePage": "signaturesPage"
-			},
-			"reason": "Firmado por ${nombreUsuario}, para el tramite $numeroTramite, {$DATE}"
-		},
-		"certConfig": {
-			"certificateLocation": "${cl}",
-		"customPath": "${urlBase}/${cert}"
-		},
-		"fileOrigins": {
-			"remote": {
-				"URI": "${urlDocumento}/{$FILE_ID}",
-				"method": "GET",
-				"fileList": "${documentos}",
-				"headers": {
-					"Accept": "application/pdf"
-				}
-			}
-		},
-		"fileDestination": {
-			"remote": {
-				"URI": "${urlBase}/api/recibo/firmado",
-				"method": "POST",
-				"fileField": "archivo",
-				"formFields": {
-					"tramite": "$numeroTramite",
-					"firmado": true,
-					"idArchivo": "{$FILE_ID}"
-				}
-			}
-		},
-		"interfaz": {
-			"title": "Firmado de documentos simple",
-			"username": "$nombreUsuario"
-		},
-		"sharedHeaders": {
-			"Authorization": "Bearer ${token}"
-		},
-		"template": {
-                        "id": "webtestplantilla_01",
-			"expiration": "1234567890",
-			"createdAt": "1247567890"
-		}
-	},
-	"signature": ""
+  "title": "V3_TEST",
+  "templateVersion": "test",
+  "argumentList": [
+    "documentos",
+    "urlBase",
+    "urlDocumento"
+  ],
+  "data": {
+    "signatureType": "PDF",
+    "pdfSignatureConfig": {
+      "VisibilityConfig": {
+        "signaturePage": "first",
+        "fontSize": "8",
+        "font": "Courier"
+      },
+      "reason": "Firmado por {$SIGNER}, el {$DATE}."
+    },
+    "certConfig": {
+      "certificateLocation": ["MSCAPI","HWTOKEN","ASK"]
+    },
+    "fileOrigins": {
+      "remote": {
+        "URI": "${urlDocumento}",
+        "method": "GET",
+        "fileList": "${documentos}",
+        "headers": {
+          "Accept": "application/pdf"
+        }
+      }
+    },
+    "fileDestination": {
+      "remote": {
+        "URI": "${urlBase}/api/recibo/firmado",
+        "method": "POST",
+        "fileField": "archivo",
+        "keepName": true,
+        "formFields": {
+          "firmado": true,
+          "idArchivo": "{$FILE_ID}"
+        }
+      }
+    },
+    "interfaz": {
+      "title": "Firmado de documentos Plantilla TEST",
+      "hideDocuments": true
+    },
+    "template": {
+      "id": "webtestplantilla_01",
+      "expiration": 1659030958375,
+      "createdAt": 1657734958375
+    }
+  },
+  "signature": "Xdl46qo8CaQhZUY5duFpiw0ELZB590Xc2KP9q4eOF4uTp7eSvzLS+wEdFaWeZop8DsDFz1sVi3Qn1u/IXEllXPnQPK9uhqjKzkBHXSGT8meB70NmNOM1ygZk8ImnhMDkpk0O899qr4ykSG2Mc3xYz83VcsH98MpumWD7FiCetYYugKyRU69BiygYDipDKnOj9gkhbNEVuFLiHMHVkuXuK2YRcz0JVOlCU7TwyB0qpcWW+CJWJDCbcMjrYkR5Y5tudq0M6vjq9ghRHXBS+ZUGgm2/Ku/peJI2iEOPmoAgi4kyLI+/rcUeEUfEi5P2CadCg1GHEly2iAL59dddSoxTvw=="
 }
