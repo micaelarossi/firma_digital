@@ -21,9 +21,9 @@
     },
     "fileOrigins": {
       "remote": {
-        "URI": "${urlDocumento}",
+        "URI": "${urlDocumento}/{$FILE_ID}",
         "method": "GET",
-        "fileList": "${documentos}/{$FILE_ID}",
+        "fileList": "${documentos}",
         "headers": {
           "Accept": "application/pdf"
         }
