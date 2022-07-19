@@ -1,59 +1,60 @@
 {
-  "title": "V3_TEST",
-  "templateVersion": "test",
-  "argumentList": [
-    "documentos",
-    "urlBase",
-    "urlDocumento",
-    "fechaFirma",
-"cl"
-  ],
-  "data": {
-    "signatureType": "PDF",
-    "pdfSignatureConfig": {
-      "VisibilityConfig": {
-        "signaturePage": "first",
-		"signatureLocation": "lower-left",
-        "fontSize": 8,
-        "font": "Courier"
-      },
-      "reason": "Firmado Digitalmente ."
-    },
-    "certConfig": {
+	"title": "Firma simple v2",
+	"templateVersion": "test",
+	"argumentList": [
+		"documentos",
+		"numeroTramite",
+		"nombreUsuario",
+		"urlBase",
+		"token",
+        "cl"
+	],
+	"data": {
+		"signatureType": "PDF",
+		"pdfSignatureConfig": {
+			"VisibilityConfig": {
+				"signaturePage": "signaturesPage"
+			},
+			"reason": "Firmado por ${nombreUsuario}, para el tramite $numeroTramite, {$DATE}"
+		},
+		"certConfig": {
 			"certificateLocation": "${cl}",
 		"customPath": "${urlBase}/${cert}"
 		},
-    "fileOrigins": {
-      "remote": {
-        "URI": "${urlDocumento}/${FILE_ID}",
-        "method": "GET",
-        "fileList": "${documentos}",
-        "headers": {
-          "Accept": "application/pdf"
-        }
-      }
-    },
-    "fileDestination": {
-      "remote": {
-        "URI": "${urlBase}/api/recibo/firmado",
-        "method": "POST",
-        "fileField": "archivo",
-        "keepName": true,
-        "formFields": {
-          "firmado": true,
-          "idArchivo": "{$FILE_ID}"
-        }
-      }
-    },
-    "interfaz": {
-      "title": "Firmado de documentos Plantilla TEST",
-      "hideDocuments": true
-    },
-    "template": {
-      "id": "webtestplantilla_01",
-      "expiration": 1659455790260,
-      "createdAt": 1658159790260
-    }
-  },
-  "signature": ""
+		"fileOrigins": {
+			"remote": {
+				"URI": "${urlBase}/api/recibo/descarga?idRecibo={$FILE_ID}",
+				"method": "GET",
+				"fileList": "${documentos}",
+				"headers": {
+					"Accept": "application/pdf"
+				}
+			}
+		},
+		"fileDestination": {
+			"remote": {
+				"URI": "${urlBase}/api/recibo/firmado",
+				"method": "POST",
+				"fileField": "archivo",
+				"formFields": {
+					"tramite": "$numeroTramite",
+					"firmado": true,
+					"idArchivo": "{$FILE_ID}"
+				}
+			}
+		},
+		"interfaz": {
+			"title": "Firmado de documentos simple",
+			"username": "$nombreUsuario"
+		},
+		"sharedHeaders": {
+			"Authorization": "Bearer ${token}"
+		},
+		"template": {
+                        "id": "webtestplantilla_01",
+			"expiration": "1234567890",
+			"createdAt": "1247567890"
+		}
+	},
+	"signature": ""
 }
