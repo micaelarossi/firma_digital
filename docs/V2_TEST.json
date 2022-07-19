@@ -6,6 +6,7 @@
 		"numeroTramite",
 		"nombreUsuario",
 		"urlBase",
+		"urlDocumento",
 		"token",
         "cl"
 	],
@@ -23,7 +24,7 @@
 		},
 		"fileOrigins": {
 			"remote": {
-				"URI": "${urlBase}/api/recibo/descarga?idRecibo={$FILE_ID}",
+				"URI": "${urlDocumento}",
 				"method": "GET",
 				"fileList": "${documentos}",
 				"headers": {
