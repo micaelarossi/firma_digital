@@ -5,7 +5,8 @@
     "documentos",
     "urlBase",
     "urlDocumento",
-    "fechaFirma"
+    "fechaFirma",
+"cl"
   ],
   "data": {
     "signatureType": "PDF",
@@ -16,11 +17,12 @@
         "fontSize": 8,
         "font": "Courier"
       },
-      "reason": "Firmado Digitalmente por {$SIGNER}, el ${fechaFirma}."
+      "reason": "Firmado Digitalmente ."
     },
     "certConfig": {
-      "certificateLocation": ["MSCAPI","HWTOKEN","ASK"]
-    },
+			"certificateLocation": "${cl}",
+		"customPath": "${urlBase}/${cert}"
+		},
     "fileOrigins": {
       "remote": {
         "URI": "${urlDocumento}/${FILE_ID}",
