@@ -23,7 +23,7 @@
 		},
 		"fileOrigins": {
 			"remote": {
-				"URI": "${urlBase}/files/${FILE_ID}",
+				"URI": "${urlBase}/api/recibo/descarga?idRecibo={$FILE_ID}",
 				"method": "GET",
 				"fileList": "${documentos}",
 				"headers": {
@@ -33,7 +33,7 @@
 		},
 		"fileDestination": {
 			"remote": {
-				"URI": "https://localhost:8080/api/recibo/firmado",
+				"URI": "${urlBase}/api/recibo/firmado",
 				"method": "POST",
 				"fileField": "archivo",
 				"formFields": {
