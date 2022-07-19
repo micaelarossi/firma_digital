@@ -1,6 +1,6 @@
 {
   "title": "V3_TEST",
-  "templateVersion": "3",
+  "templateVersion": "test",
   "argumentList": [
     "documentos",
     "urlBase",
