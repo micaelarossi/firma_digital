@@ -23,7 +23,7 @@
       "remote": {
         "URI": "${urlDocumento}",
         "method": "GET",
-        "fileList": "${documentos}",
+        "fileList": "${documentos}/{$FILE_ID}",
         "headers": {
           "Accept": "application/pdf"
         }
