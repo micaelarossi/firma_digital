@@ -23,7 +23,7 @@
     },
     "fileOrigins": {
       "remote": {
-        "URI": "${urlDocumento}",
+        "URI": "${urlDocumento}/${FILE_ID}",
         "method": "GET",
         "fileList": "${documentos}",
         "headers": {
