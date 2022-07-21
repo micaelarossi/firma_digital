@@ -1,20 +1,22 @@
 {
   "title": "V3_TEST",
-  "templateVersion": "test",
+  "templateVersion": "3",
   "argumentList": [
     "documentos",
     "urlBase",
-    "urlDocumento"
+    "urlDocumento",
+    "fechaFirma"
   ],
   "data": {
     "signatureType": "PDF",
     "pdfSignatureConfig": {
       "VisibilityConfig": {
         "signaturePage": "first",
-        "fontSize": "8",
+		"signatureLocation": "lower-left",
+        "fontSize": 8,
         "font": "Courier"
       },
-      "reason": "Firmado por {$SIGNER}, el {$DATE}."
+      "reason": "Firmado Digitalmente por {$SIGNER}, el ${fechaFirma}."
     },
     "certConfig": {
       "certificateLocation": ["MSCAPI","HWTOKEN","ASK"]
@@ -47,9 +49,9 @@
     },
     "template": {
       "id": "webtestplantilla_01",
-      "expiration": 1659030958375,
-      "createdAt": 1657734958375
+      "expiration": 1659455790260,
+      "createdAt": 1658159790260
     }
   },
-  "signature": "Xdl46qo8CaQhZUY5duFpiw0ELZB590Xc2KP9q4eOF4uTp7eSvzLS+wEdFaWeZop8DsDFz1sVi3Qn1u/IXEllXPnQPK9uhqjKzkBHXSGT8meB70NmNOM1ygZk8ImnhMDkpk0O899qr4ykSG2Mc3xYz83VcsH98MpumWD7FiCetYYugKyRU69BiygYDipDKnOj9gkhbNEVuFLiHMHVkuXuK2YRcz0JVOlCU7TwyB0qpcWW+CJWJDCbcMjrYkR5Y5tudq0M6vjq9ghRHXBS+ZUGgm2/Ku/peJI2iEOPmoAgi4kyLI+/rcUeEUfEi5P2CadCg1GHEly2iAL59dddSoxTvw=="
+  "signature": "GzjZS9QFcjrX1Tpn4nq9IsHViDg2TvZC/VkNxJT3tU0PQ+oKjN2oKi/SG0YBP/er4BQx4tybjzFCKQ8GeG0pY9jzlInDkpbzNcnPoG6QMfZg/mEZBRxC497ieHIuZ3hSHLVTaVyqWYj1Q/gsSs5IMgLo3cnEW5Z0n0ER8/g8v/RVHMBC+aaRWOa9go1tKDYu6pbGaMaZG2guTXrZo80//8Q4E5flDf3yB/yGVMMlLWTAUw9ana9jt78kZTO7zS2kWFkAmRyPEToIw8RHIyYp2phwbkVs+01Xi5J6JJAC1mGTNXI94yOvLlo8SAwzPoa29uoJ531oKknywhR+EPCejg=="
 }
